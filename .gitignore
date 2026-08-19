@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+dist/
+build/
+data/tle/*.tle
+data/observations/*
+!data/observations/.gitkeep
+

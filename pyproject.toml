@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "orbital-ground"
+version = "0.1.0"
+description = "A modular, learning-focused RF ground-station control plane"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "RF Ground Station contributors"}]
+dependencies = [
+    "skyfield>=1.49,<2",
+    "tzdata>=2025.2; platform_system == 'Windows'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+groundstation = "groundstation.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/groundstation"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
