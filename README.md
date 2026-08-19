@@ -19,9 +19,7 @@ pipelines without a rewrite.
 - Preview hardware commands using `--dry-run` without an SDR attached.
 
 Meteor transmitter status and frequencies can change. The example configuration uses M2-3 at
-137.9 MHz and M2-4 at 137.1 MHz, but verify current status before scheduling. At the time this
-project was initialized, community status reporting showed M2-4 LRPT operating and M2-3 LRPT off.
-The software retains M2-3 because it is still useful for pass-prediction practice and may return.
+137.9 MHz and M2-4 at 137.1 MHz, but verify current status before scheduling.
 
 ## Install
 
